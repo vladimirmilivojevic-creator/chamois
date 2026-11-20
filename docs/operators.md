@@ -23,11 +23,11 @@ chamois crosscheck                 # Bell/GHZ vs AQT offline simulator, runs loc
 `chamois timeline` prints an ASCII plot (one row per channel) and, with `--png`, saves a matplotlib chart:
 
 ```text
-gate window 1001.0 - 1218.1 us (one shot: 2719.1 us)
+gate window 1001.0 - 1225.6 us (one shot: 2726.6 us)
      cool |c                                                                       |
-  addr_q0 |###===============================================================### |
-  addr_q1 |   ===============================================================####|
- ms_drive |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   |
+  addr_q0 |#####===============================================================### |
+  addr_q1 |     ===============================================================####|
+ ms_drive |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   |
    detect |                                                                       d|
 legend: # R pulse   = MS leg   ~ MS drive   c cooling   d detection
 ```
