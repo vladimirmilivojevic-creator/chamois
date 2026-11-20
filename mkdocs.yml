@@ -1,0 +1,38 @@
+site_name: CHAMOIS
+site_description: Mini control stack for a simulated trapped-ion quantum computer
+site_url: https://vladimirmilivojevic-creator.github.io/chamois/
+repo_url: https://github.com/vladimirmilivojevic-creator/chamois
+repo_name: vladimirmilivojevic-creator/chamois
+copyright: Vladimir Milivojevic, 2026
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: light blue
+  features:
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Overview: index.md
+  - For researchers: researchers.md
+  - For operators: operators.md
+  - Timing model: timing-model.md
+  - Architecture: architecture.md
+  - API reference: api.md
+  - Development: development.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
