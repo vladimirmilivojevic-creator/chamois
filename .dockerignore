@@ -1,0 +1,12 @@
+.venv
+.git
+.github
+**/__pycache__
+.pytest_cache
+.hypothesis
+.mypy_cache
+.ruff_cache
+scheduler/target
+site
+docs
+tests

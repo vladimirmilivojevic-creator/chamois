@@ -1,0 +1,22 @@
+# Render Blueprint: one free Docker web service (Frankfurt).
+services:
+  - type: web
+    name: chamois-api
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - chamois/**
+        - scheduler/**
+        - Dockerfile
+        - pyproject.toml
+    envVars:
+      - key: CHAMOIS_REQUIRE_RUST
+        value: "1"
+      - key: CHAMOIS_TIME_SCALE
+        value: "1.0"
