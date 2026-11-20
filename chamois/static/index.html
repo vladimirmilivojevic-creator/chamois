@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHAMOIS operator console</title>
+  <meta name="description" content="Mini control stack for a simulated trapped-ion quantum computer">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='8' cy='16' r='4' fill='%2338bdf8'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%2338bdf8'/%3E%3Ccircle cx='24' cy='16' r='4' fill='%2338bdf8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg class="ions" viewBox="0 0 60 16" aria-hidden="true">
+        <circle cx="6" cy="8" r="4"/><circle cx="18" cy="8" r="4"/><circle cx="30" cy="8" r="4"/><circle cx="42" cy="8" r="4"/><circle cx="54" cy="8" r="4"/>
+      </svg>
+      <div>
+        <h1>CHAMOIS</h1>
+        <p>mini control stack for a simulated trapped-ion quantum computer</p>
+      </div>
+    </div>
+    <nav class="links">
+      <span id="health" class="pill pill-wait">checking API...</span>
+      <a href="/docs" target="_blank" rel="noopener">API docs</a>
+      <a href="https://vladimirmilivojevic-creator.github.io/chamois/" target="_blank" rel="noopener">Docs</a>
+      <a href="https://github.com/vladimirmilivojevic-creator/chamois" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <section id="login" class="login hidden">
+    <h2>Pick a demo role</h2>
+    <p>Both use public demo tokens. Researchers submit circuits and see their own jobs. Operators see the whole queue and edit the device calibration.</p>
+    <div class="login-buttons">
+      <button class="btn primary big" data-login="researcher-demo-token">Log in as Researcher</button>
+      <button class="btn big" data-login="operator-demo-token">Log in as Operator</button>
+    </div>
+    <p class="muted small">Circuits use AQT's native gates (R, RZ, RXX, MEASURE) in the ARNICA job format. A Rust scheduler turns them into a nanosecond-timed pulse timeline; a simulated 10-ion device runs it.</p>
+  </section>
+
+  <main id="app" class="hidden">
+    <div class="rolebar">
+      <span>Signed in as <strong id="who"></strong> <span id="role" class="chip"></span></span>
+      <button class="btn ghost small" id="switch-role">Switch role</button>
+    </div>
+
+    <div class="grid two">
+      <section class="card">
+        <div class="card-head"><h2>1. Submit a circuit</h2><span class="muted small">POST /api/v1/submit/default/chamois</span></div>
+        <div id="presets" class="presets"></div>
+        <label class="field">Label <input id="label" maxlength="200"></label>
+        <label class="field">Job payload (ARNICA format, angles in units of &pi;)
+          <textarea id="payload" spellcheck="false" rows="12"></textarea>
+        </label>
+        <div class="actions">
+          <button class="btn primary" id="submit">Submit job</button>
+          <button class="btn" id="preview">Preview pulse schedule</button>
+          <span id="submit-msg" class="small"></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-head"><h2>2. Job queue</h2><span id="queue-info" class="muted small"></span></div>
+        <div class="table-wrap">
+          <table class="jobs">
+            <thead><tr><th>Job</th><th>Label</th><th>Status</th><th>Progress</th><th>Owner</th><th></th></tr></thead>
+            <tbody id="jobs"><tr><td colspan="6" class="muted">No jobs yet. Pick a preset and submit it.</td></tr></tbody>
+          </table>
+        </div>
+        <p class="muted small">States follow ARNICA: queued &rarr; ongoing &rarr; finished / error / cancelled. The device runs one job at a time and takes as long as the real shots would.</p>
+      </section>
+    </div>
+
+    <section class="card" id="detail">
+      <div class="card-head">
+        <h2>3. Pulse timeline &amp; results <span id="detail-title" class="muted"></span></h2>
+        <div class="toggles">
+          <select id="circuit-select" class="hidden" aria-label="circuit"></select>
+          <label class="small"><input type="checkbox" id="full-shot"> show cooling &amp; detection</label>
+        </div>
+      </div>
+      <div id="steps" class="steps"></div>
+      <div id="violations"></div>
+      <div id="timeline" class="timeline"><p class="muted">Select a job (or preview a schedule) to see its pulses per laser channel.</p></div>
+      <div id="histogram" class="histogram"></div>
+    </section>
+
+    <div class="grid two">
+      <section class="card">
+        <div class="card-head"><h2>Device calibration</h2><span id="cal-meta" class="muted small"></span></div>
+        <div class="cal-params" id="cal-params"></div>
+        <div class="table-wrap">
+          <table class="cal"><thead><tr><th>Ion</th><th>&pi; time (&micro;s)</th><th>Enabled</th></tr></thead><tbody id="cal-qubits"></tbody></table>
+        </div>
+        <div class="actions">
+          <button class="btn primary" id="cal-save">Save calibration</button>
+          <span id="cal-msg" class="small"></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-head"><h2>Cross-check vs AQT offline simulator</h2></div>
+        <p class="small">Bell and GHZ circuits are transpiled by <code>qiskit-aqt-provider</code>, scheduled into pulses by CHAMOIS and simulated from the pulses. Results are compared with Qiskit's exact statevector and with AQT's offline simulator (2000 shots).</p>
+        <div class="actions"><button class="btn" id="crosscheck">Run cross-check</button><span id="cc-msg" class="small"></span></div>
+        <div id="cc-table"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">CHAMOIS &middot; built by Vladimir Milivojevic &middot; simulated device, not real hardware</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

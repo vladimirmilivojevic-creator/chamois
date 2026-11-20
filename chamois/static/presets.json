@@ -1,0 +1,1116 @@
+[
+ {
+  "id": "bell",
+  "title": "Bell pair",
+  "hint": "2 ions, 1 MS gate",
+  "job": {
+   "job_type": "quantum_circuit",
+   "label": "Bell pair",
+   "payload": {
+    "circuits": [
+     {
+      "repetitions": 200,
+      "quantum_circuit": [
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 1.0,
+        "phi": 0.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 0,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "R",
+        "qubit": 1,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "MEASURE"
+       }
+      ],
+      "number_of_qubits": 2
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "ghz5",
+  "title": "GHZ-5",
+  "hint": "transpiled by qiskit-aqt-provider",
+  "job": {
+   "job_type": "quantum_circuit",
+   "label": "GHZ-5",
+   "payload": {
+    "circuits": [
+     {
+      "repetitions": 500,
+      "quantum_circuit": [
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 1.0,
+        "phi": 0.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 0,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 1,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 1,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         1,
+         2
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 1,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 1,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 2,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 2,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         2,
+         3
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 2,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 2,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 3,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 3,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         3,
+         4
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 3,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 3,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "R",
+        "qubit": 4,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "MEASURE"
+       }
+      ],
+      "number_of_qubits": 5
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "ghz10",
+  "title": "GHZ-10",
+  "hint": "all 10 ions",
+  "job": {
+   "job_type": "quantum_circuit",
+   "label": "GHZ-10",
+   "payload": {
+    "circuits": [
+     {
+      "repetitions": 1000,
+      "quantum_circuit": [
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 1.0,
+        "phi": 0.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 0,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 1,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 1,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         1,
+         2
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 1,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 1,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 2,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 2,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         2,
+         3
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 2,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 2,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 3,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 3,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         3,
+         4
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 3,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 3,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 4,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 4,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         4,
+         5
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 4,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 4,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 5,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 5,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         5,
+         6
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 5,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 5,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 6,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 6,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         6,
+         7
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 6,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 6,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 7,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 7,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         7,
+         8
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 7,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 7,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 8,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 8,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         8,
+         9
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 8,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 8,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "R",
+        "qubit": 9,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "MEASURE"
+       }
+      ],
+      "number_of_qubits": 10
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "batch",
+  "title": "Batch of 2",
+  "hint": "shows finished_count",
+  "job": {
+   "job_type": "quantum_circuit",
+   "label": "Batch: Bell + GHZ-5 (2 circuits)",
+   "payload": {
+    "circuits": [
+     {
+      "repetitions": 200,
+      "quantum_circuit": [
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 1.0,
+        "phi": 0.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 0,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "R",
+        "qubit": 1,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "MEASURE"
+       }
+      ],
+      "number_of_qubits": 2
+     },
+     {
+      "repetitions": 500,
+      "quantum_circuit": [
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 1.0,
+        "phi": 0.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 0,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 1,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 1,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         1,
+         2
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 1,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 1,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 2,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 2,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         2,
+         3
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 2,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 2,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RZ",
+        "qubit": 3,
+        "phi": 0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 3,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         3,
+         4
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RZ",
+        "qubit": 3,
+        "phi": -0.5
+       },
+       {
+        "operation": "R",
+        "qubit": 3,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "R",
+        "qubit": 4,
+        "theta": 0.5,
+        "phi": 1.0
+       },
+       {
+        "operation": "MEASURE"
+       }
+      ],
+      "number_of_qubits": 5
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "deep",
+  "title": "Too deep",
+  "hint": "breaks the coherence budget",
+  "job": {
+   "job_type": "quantum_circuit",
+   "label": "48 MS gates: exceeds the coherence budget",
+   "payload": {
+    "circuits": [
+     {
+      "repetitions": 100,
+      "number_of_qubits": 2,
+      "quantum_circuit": [
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         1
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "MEASURE"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "outside",
+  "title": "Bad qubit",
+  "hint": "qubit 3 in a 2-qubit register",
+  "job": {
+   "job_type": "quantum_circuit",
+   "label": "Qubit outside the register",
+   "payload": {
+    "circuits": [
+     {
+      "repetitions": 100,
+      "number_of_qubits": 2,
+      "quantum_circuit": [
+       {
+        "operation": "R",
+        "qubit": 0,
+        "theta": 0.5,
+        "phi": 0.0
+       },
+       {
+        "operation": "RXX",
+        "qubits": [
+         0,
+         3
+        ],
+        "theta": 0.5
+       },
+       {
+        "operation": "MEASURE"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ }
+]
