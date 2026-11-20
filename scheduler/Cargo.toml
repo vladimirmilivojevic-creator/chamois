@@ -1,0 +1,23 @@
+[package]
+name = "chamois-scheduler"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Compiles AQT native gates into an RTIO-style, nanosecond-timed pulse timeline"
+license = "MIT"
+publish = false
+
+[lib]
+name = "chamois_scheduler"
+# cdylib for the Python extension, rlib so `cargo test` can link the pure Rust core.
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# The Python bindings are optional: `cargo test` and `cargo clippy` run on the
+# pure Rust core without a Python interpreter, maturin enables this feature.
+python = ["dep:pyo3"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+pyo3 = { version = "0.23", optional = true }

@@ -1,0 +1,15 @@
+[build-system]
+requires = ["maturin>=1.7,<2"]
+build-backend = "maturin"
+
+[project]
+name = "chamois-scheduler"
+version = "0.1.0"
+description = "Rust pulse scheduler for CHAMOIS (PyO3 bindings)"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.maturin]
+bindings = "pyo3"
+module-name = "chamois_scheduler"
+features = ["python", "pyo3/extension-module"]
