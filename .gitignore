@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+*.pyd
+*.so
+
+# Rust
+scheduler/target/
+
+# Docs build
+site/
+
+# Local
+.env
+*.png
+!docs/**/*.png
