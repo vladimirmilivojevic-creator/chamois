@@ -85,6 +85,22 @@ mod tests {
     }
 
     #[test]
+    fn json_boundary_keeps_floats_exact() {
+        // Without serde_json's float_roundtrip feature this parses as -4.0.
+        let op: types::Op = serde_json::from_str(
+            r#"{"operation": "RZ", "qubit": 0, "phi": -3.9999999999999996}"#,
+        )
+        .unwrap();
+        assert_eq!(
+            op,
+            types::Op::Rz {
+                qubit: 0,
+                phi: -3.9999999999999996
+            }
+        );
+    }
+
+    #[test]
     fn json_boundary_reports_malformed_input() {
         assert!(compile_json(r#"{"operations": "nope"}"#).is_err());
     }

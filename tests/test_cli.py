@@ -83,8 +83,9 @@ def test_empty_queue(server: TestClient, capsys: pytest.CaptureFixture[str]) -> 
 
 def test_http_errors_are_reported(server: TestClient) -> None:
     server.headers["Authorization"] = "Bearer researcher-demo-token"
-    # TestClient raises its own HTTPStatusError class, so only the status is checked here.
-    with pytest.raises(Exception, match="403"):
+    # Depending on the httpx version, TestClient raises httpx's or its own HTTPStatusError:
+    # the CLI turns the first into SystemExit, so only the status code is checked here.
+    with pytest.raises(BaseException, match="403"):
         cli.main(["calibration", "--disable", "1"])
 
 

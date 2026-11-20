@@ -19,5 +19,6 @@ python = ["dep:pyo3"]
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+# float_roundtrip: parse floats exactly, so Rust sees the same angles as Python
+serde_json = { version = "1", features = ["float_roundtrip"] }
 pyo3 = { version = "0.23", optional = true }
