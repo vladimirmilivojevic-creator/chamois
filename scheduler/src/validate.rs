@@ -18,7 +18,10 @@ pub fn validate(timeline: &Timeline, calibration: &Calibration) -> Vec<Violation
         if pulse.duration_ns == 0 {
             violations.push(Violation::new(
                 "empty_pulse",
-                format!("{}: pulse at {} ns has zero duration", pulse.channel, pulse.start_ns),
+                format!(
+                    "{}: pulse at {} ns has zero duration",
+                    pulse.channel, pulse.start_ns
+                ),
             ));
         }
         if pulse.start_ns % clock != 0 || pulse.duration_ns % clock != 0 {
@@ -36,7 +39,10 @@ pub fn validate(timeline: &Timeline, calibration: &Calibration) -> Vec<Violation
                 if !enabled {
                     violations.push(Violation::new(
                         "qubit_disabled",
-                        format!("{}: qubit {qubit} is disabled or not calibrated", pulse.channel),
+                        format!(
+                            "{}: qubit {qubit} is disabled or not calibrated",
+                            pulse.channel
+                        ),
                     ));
                 }
             }
@@ -136,13 +142,20 @@ mod tests {
 
     #[test]
     fn accepts_a_well_spaced_channel() {
-        assert!(codes(vec![pulse("addr_q0", 0, 800, 0), pulse("addr_q0", 1_800, 800, 0)]).is_empty());
+        assert!(codes(vec![
+            pulse("addr_q0", 0, 800, 0),
+            pulse("addr_q0", 1_800, 800, 0)
+        ])
+        .is_empty());
     }
 
     #[test]
     fn detects_overlap_even_when_pulses_are_unsorted() {
         assert_eq!(
-            codes(vec![pulse("addr_q0", 800, 800, 0), pulse("addr_q0", 0, 1_600, 0)]),
+            codes(vec![
+                pulse("addr_q0", 800, 800, 0),
+                pulse("addr_q0", 0, 1_600, 0)
+            ]),
             vec!["overlap"]
         );
     }
@@ -150,20 +163,29 @@ mod tests {
     #[test]
     fn detects_short_gap() {
         assert_eq!(
-            codes(vec![pulse("addr_q0", 0, 800, 0), pulse("addr_q0", 1_000, 800, 0)]),
+            codes(vec![
+                pulse("addr_q0", 0, 800, 0),
+                pulse("addr_q0", 1_000, 800, 0)
+            ]),
             vec!["settle_time"]
         );
     }
 
     #[test]
     fn detects_off_grid_timestamps_and_disabled_ions() {
-        assert_eq!(codes(vec![pulse("addr_q1", 3, 800, 1)]), vec!["off_grid", "qubit_disabled"]);
+        assert_eq!(
+            codes(vec![pulse("addr_q1", 3, 800, 1)]),
+            vec!["off_grid", "qubit_disabled"]
+        );
     }
 
     #[test]
     fn detects_empty_pulses_and_coherence_budget() {
         assert_eq!(
-            codes(vec![pulse("addr_q0", 0, 0, 0), pulse("addr_q0", 200_000, 8, 0)]),
+            codes(vec![
+                pulse("addr_q0", 0, 0, 0),
+                pulse("addr_q0", 200_000, 8, 0)
+            ]),
             vec!["empty_pulse", "coherence_budget"]
         );
     }

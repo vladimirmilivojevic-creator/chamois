@@ -1,7 +1,7 @@
 """Run a standard Qiskit circuit on CHAMOIS through AQT's own qiskit-aqt-provider.
 
-    pip install -e ".[qiskit]"
-    python examples/qiskit_on_chamois.py https://chamois-api.onrender.com
+pip install -e ".[qiskit]"
+python examples/qiskit_on_chamois.py https://chamois-api.onrender.com
 """
 
 import sys
