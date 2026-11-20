@@ -1,0 +1,401 @@
+{
+  "job_type": "quantum_circuit",
+  "label": "48 MS gates: exceeds the coherence budget",
+  "payload": {
+    "circuits": [
+      {
+        "repetitions": 100,
+        "number_of_qubits": 2,
+        "quantum_circuit": [
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "MEASURE"
+          }
+        ]
+      }
+    ]
+  }
+}

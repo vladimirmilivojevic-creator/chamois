@@ -1,0 +1,48 @@
+{
+  "job_type": "quantum_circuit",
+  "label": "Bell pair",
+  "payload": {
+    "circuits": [
+      {
+        "repetitions": 200,
+        "quantum_circuit": [
+          {
+            "operation": "R",
+            "qubit": 0,
+            "theta": 1.0,
+            "phi": 0.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 0,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 0,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "R",
+            "qubit": 1,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "MEASURE"
+          }
+        ],
+        "number_of_qubits": 2
+      }
+    ]
+  }
+}

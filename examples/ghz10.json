@@ -1,0 +1,288 @@
+{
+  "job_type": "quantum_circuit",
+  "label": "GHZ-10",
+  "payload": {
+    "circuits": [
+      {
+        "repetitions": 1000,
+        "quantum_circuit": [
+          {
+            "operation": "R",
+            "qubit": 0,
+            "theta": 1.0,
+            "phi": 0.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              0,
+              1
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 0,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 0,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RZ",
+            "qubit": 1,
+            "phi": 0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 1,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              1,
+              2
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 1,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 1,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RZ",
+            "qubit": 2,
+            "phi": 0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 2,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              2,
+              3
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 2,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 2,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RZ",
+            "qubit": 3,
+            "phi": 0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 3,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              3,
+              4
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 3,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 3,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RZ",
+            "qubit": 4,
+            "phi": 0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 4,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              4,
+              5
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 4,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 4,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RZ",
+            "qubit": 5,
+            "phi": 0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 5,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              5,
+              6
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 5,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 5,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RZ",
+            "qubit": 6,
+            "phi": 0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 6,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              6,
+              7
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 6,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 6,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RZ",
+            "qubit": 7,
+            "phi": 0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 7,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              7,
+              8
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 7,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 7,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RZ",
+            "qubit": 8,
+            "phi": 0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 8,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "RXX",
+            "qubits": [
+              8,
+              9
+            ],
+            "theta": 0.5
+          },
+          {
+            "operation": "RZ",
+            "qubit": 8,
+            "phi": -0.5
+          },
+          {
+            "operation": "R",
+            "qubit": 8,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "R",
+            "qubit": 9,
+            "theta": 0.5,
+            "phi": 1.0
+          },
+          {
+            "operation": "MEASURE"
+          }
+        ],
+        "number_of_qubits": 10
+      }
+    ]
+  }
+}
